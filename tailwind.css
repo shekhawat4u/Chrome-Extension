@@ -1,0 +1,64 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Global Dark Mode Styles */
+body.dark-mode {
+  @apply bg-gray-900 text-gray-100; /* Dark background with light text */
+}
+
+/* Button Styles for Dark Mode */
+body.dark-mode button {
+  @apply text-gray-100 rounded-lg transition-all ease-in-out duration-300 shadow-md hover:shadow-lg;
+}
+
+/* Dark Mode Headers */
+body.dark-mode h1,
+body.dark-mode h2 {
+  @apply text-gray-200 font-semibold; /* Lighter headers with bold font */
+}
+
+/* Specific Button Styles in Dark Mode */
+body.dark-mode .reopen-group {
+  @apply text-green-700 ; /* Green button with hover effects */
+}
+
+body.dark-mode .reopen-group:hover {
+  @apply text-green-600 bg-transparent; /* Brighter green with lighter text on hover */
+}
+
+body.dark-mode .add-to-group {
+  @apply text-yellow-700 ; /* Yellow button with hover effects */
+}
+
+body.dark-mode .add-to-group:hover {
+  @apply text-yellow-600 bg-transparent; /* Brighter yellow with lighter text on hover */
+}
+
+body.dark-mode .delete-group {
+  @apply text-red-700 ; /* Red button with hover effects */
+}
+
+body.dark-mode .delete-group:hover {
+  @apply text-red-600 bg-transparent; /* Brighter red with lighter text on hover */
+}
+
+body.dark-mode .delete-tab{
+    @apply text-red-700;
+}
+
+/* Focus Styles for Accessibility */
+body.dark-mode button:focus {
+  @apply outline-none ring-2 ring-offset-2 ring-gray-500; /* Focused buttons with outline */
+}
+
+body.dark-mode .reopen-group:focus,
+body.dark-mode .add-to-group:focus,
+body.dark-mode .delete-group:focus {
+  @apply outline-none ring-2 ring-offset-2 ring-green-500; /* Focused specific buttons with color */
+}
+
+/* Additional Styling for Links in Dark Mode */
+body.dark-mode a {
+  @apply text-blue-400 hover:text-blue-500 transition-colors ease-in-out; /* Blue links with hover effect */
+}
