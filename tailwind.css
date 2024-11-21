@@ -27,6 +27,14 @@ body.dark-mode .reopen-group:hover {
   @apply text-green-600 bg-transparent; /* Brighter green with lighter text on hover */
 }
 
+body.dark-mode .reopen-tab {
+  @apply text-green-700 ; /* Green button with hover effects */
+}
+
+body.dark-mode .reopen-tab:hover {
+  @apply text-green-600 bg-transparent; /* Brighter green with lighter text on hover */
+}
+
 body.dark-mode .add-to-group {
   @apply text-yellow-700 ; /* Yellow button with hover effects */
 }
@@ -53,6 +61,7 @@ body.dark-mode button:focus {
 }
 
 body.dark-mode .reopen-group:focus,
+body.dark-mode .reopen-tab:focus,
 body.dark-mode .add-to-group:focus,
 body.dark-mode .delete-group:focus {
   @apply outline-none ring-2 ring-offset-2 ring-green-500; /* Focused specific buttons with color */

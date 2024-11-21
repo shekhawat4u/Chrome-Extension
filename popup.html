@@ -11,44 +11,66 @@
     #dark-mode-toggle i {
       transition: transform 0.3s ease;
     }
+    #search-input {
+      border: 1px solid #ccc;
+      border-right: none;
+      padding: 0.2rem;
+      width: 200px;
+      border-radius: 4px 0 0 4px;
+      font-size: 0.9rem;
+      color: #333;
+    }
+
+    #search-tabs {
+      border: 1px solid #ccc;
+      border-left: none;
+      padding: 0.2rem;
+      background-color: #007bff;
+      color: white;
+      border-radius: 0 4px 4px 0;
+      cursor: pointer;
+      font-size: 0.9rem;
+    }
+
+    #search-tabs:hover {
+      background-color: #0056b3;
+    }
   </style>
 </head>
 <body class="bg-gray-100 p-4 font-sans">
-    <div class="w-full">
-        <!-- Header Section -->
-        <h1 class="text-2xl font-bold text-gray-800 mb-4 flex items-center justify-between">
-            <!-- Icon and Title -->
-            <div class="flex items-center">
-              <i class="fas fa-folder-open text-blue-500 mr-2"></i>
-              <span>Tab Manager</span>
-            </div>
-          
-            <!-- Dark Mode Button -->
-            <button
-              id="dark-mode-toggle"
-              class="bg-gray-800 text-white px-4 py-2 rounded-md hover:bg-gray-700 text-sm flex items-center"
-            >
-              <i class="fas fa-moon"></i>
-            </button>
-        </h1>
-      
-        <!-- Current Tabs Section -->
-        <div id="tabs-container" class="space-y-4">
-          <h2 class="text-lg font-semibold text-gray-700">Open Tabs</h2>
-          <!-- Tab items will be dynamically injected here -->
-        </div>
-        
-        <button id="save-group" class="bg-blue-500 text-white w-full py-2 mt-4 rounded-md hover:bg-blue-600">
-          Save Group
+  <div class="w-full mx-auto min-w-[550px] max-w-[700px]">
+    <h1 class="text-2xl font-bold text-gray-800 mb-4 flex items-center justify-between">
+      <div class="flex items-center">
+        <i class="fas fa-folder-open text-blue-500 mr-2"></i>
+        <span>Tab Manager</span>
+      </div>
+      <div class="flex items-center">
+        <input
+          type="text"
+          id="search-input"
+          placeholder="Search tabs..."
+        />
+        <button id="search-tabs">
+          <i class="fas fa-search"></i>
         </button>
-        
-        <!-- Saved Groups Section -->
-        <div id="saved-groups" class="mt-6">
-          <h2 class="text-lg font-semibold text-gray-700">Saved Groups</h2>
-          <ul class="space-y-2">
-            <!-- Saved groups will be dynamically injected here -->
-          </ul>
-        </div>
+      </div>
+      <button
+        id="dark-mode-toggle"
+        class="bg-gray-800 text-white px-4 py-2 rounded-md hover:bg-gray-700 text-sm flex items-center"
+      >
+        <i class="fas fa-moon"></i>
+      </button>
+    </h1>
+    <div id="tabs-container" class="space-y-4">
+      <h2 class="text-lg font-semibold text-gray-700">Open Tabs</h2>
     </div>
+    <button id="save-group" class="bg-blue-500 text-white w-full py-2 mt-4 rounded-md hover:bg-blue-600">
+      Save Group
+    </button>
+    <div id="saved-groups" class="mt-6">
+      <h2 class="text-lg font-semibold text-gray-700">Saved Groups</h2>
+      <ul class="space-y-2"></ul>
+    </div>
+  </div>
 </body>
 </html>
